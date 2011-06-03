@@ -80,6 +80,7 @@
       affiliation:
         en: @adzuki34
         ja:
+      gravatar: f37b9a968b2326062190677906a93080
     - name:
         en: Leonard Chin
         ja: レオ Leonard Chin
@@ -264,14 +265,152 @@
       affiliation:
         en: Ruby Sapporo, Hokkaido Information University
         ja: Ruby札幌, 北海道情報大学
-#- section:
-#    name:
-#      en: "Staff"
-#      ja: "当日スタッフ"
-#    people:
-#    - name:
-#        en:
-#        ja:
-#      affiliation:
-#        en:
-#        ja:
+- section:
+    name:
+      en: "Staff"
+      ja: "当日スタッフ"
+    people:
+    - name:
+        en: Ryunosuke SATO
+        ja: 佐藤竜之介
+      affiliation:
+        en: Enishi Tech Inc. , @tricknotes
+        ja: 株式会社えにしテック, @tricknotes
+    - name:
+        en: Hiroki Yoshioka
+        ja: 吉岡ひろき
+      affiliation:
+        en: irohiroki.com
+        ja:
+    - name:
+        en: Yutaka OGASAWARA
+        ja: おがさわらゆたか
+      affiliation:
+        en: RubySapporo
+        ja: Ruby札幌
+    - name:
+        en: Hiroki TOI
+        ja: 都井 大樹
+      affiliation:
+        en: Oyama.N.C.T.
+        ja: 小山高専
+    - name:
+        en: Kazuhiko
+        ja: かずひこ
+      affiliation:
+        en: Free Software Programmer, Nexedi SA
+        ja: フリーソフトウェアプログラマ, Nexedi SA
+    - name:
+        en: Gentaro TERADA
+        ja: 寺田玄太郎
+      affiliation:
+        en: Eiwa System Management, @hibariya
+        ja: 永和システムマネジメント, @hibariya
+    - name:
+        en: Hiroshi TOMITA
+        ja: 冨田 寛
+      affiliation:
+        en: @tomy_kaira
+        ja:
+    - name:
+        en: Yusuke SAKAKI
+        ja: 榊 祐介
+      affiliation:
+        en: @ysakaki, 30min. Inc. , Mitaka.rb
+        ja: @ysakaki, （株）サンゼロミニッツ, Mitaka.rb
+    - name:
+        en: Kazuya NUMATA
+        ja: 沼田 一哉
+      affiliation:
+        en: ESTCOSMO Co., Ltd.
+        ja: 株式会社エストコスモ
+    - name:
+        en: SASAKI Daisuke
+        ja: 佐々木　大輔
+      affiliation:
+        en: LOCAL, OpenSource, Inc.
+        ja: 一般社団法人LOCAL, 株式会社オープンソース
+    - name:
+        en: Iori Nishizawa
+        ja: 西澤　伊織
+      affiliation:
+        en: EC Navi Company
+        ja: 株式会社ECナビ
+    - name:
+        en: OHSHITA Makoto
+        ja: おおしたまこと
+      affiliation:
+        en: @ohshita
+        ja:
+    - name:
+        en: Motoki Ito
+        ja: 伊藤元気
+      affiliation:
+        en: @gnnk
+        ja:
+    - name:
+        en: Takuya ISHIOKA
+        ja: 石岡卓也
+      affiliation:
+        en:
+        ja:
+    - name:
+        en: Kengo HAMASAKI
+        ja: はまさき
+      affiliation:
+        en: COOKPAD Inc., @hmsk
+        ja: クックパッド株式会社, @hmsk
+    - name:
+        en: Mahito OGURA
+        ja: 小倉真人
+      affiliation:
+        en: @Mahito
+        ja:
+    - name:
+        en: Junichiro Kita
+        ja: 喜多 淳一郎
+      affiliation:
+        en: @kitaj
+        ja:
+    - name:
+        en: Shinichi Maeshima
+        ja: 前島真一
+      affiliation:
+        en: @netwillnet
+        ja:
+    - name:
+        en: Kai Suzuki
+        ja: すずきかい
+      affiliation:
+        en: @ZoAmichi
+        ja:
+    - name:
+        en: shiget
+        ja: しげっと
+      affiliation:
+        en: @shiget84
+        ja:
+    - name:
+        en: Junya Ogino
+        ja: 荻野淳也
+      affiliation:
+        en:
+        ja:
+    - name:
+        en: Toshihumi HAYAKAWA
+        ja: 早川　知史
+      affiliation:
+        en: @tohayakawa
+        ja:
+    - name:
+        en: Iwamoto Masaki
+        ja: 岩本 政樹
+      affiliation:
+        en: EC Navi Company
+        ja: 株式会社ECナビ
+    - name:
+        en: yuki TORII
+        ja: 鳥井雪
+      affiliation:
+        en: Everyleaf
+        ja: 株式会社万葉
