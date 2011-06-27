@@ -21,17 +21,18 @@
                 #{sub_event.localize(I18n.locale, :title)},
                 = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["name"])
                 (#{RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["affiliation"])})
-      - if @event.language.present?
+      - if @event.language.present? || @event.sub_events
         %h3
           #{t(:presentation_language)}
-        %p= @event.language
+        %p= @event.language || @event.sub_events.map(&:language).uniq.join(", ")
       != render :partial => 'shared/2011/facebook'
       != render :partial => 'shared/2011/twitter'
-    - if @event.presenters
+    - if @event.presenters || @event.sub_events
       #speaker
         %h3
           #{t(:speaker)}
-        - @event.presenters.each do |presenter|
+        - presenters = @event.presenters || @event.sub_events.map(&:presenters).flatten
+        - presenters.each do |presenter|
           %div.avatar
             %a{:href => "#", :target => "_blank"}
               - if presenter['gravatar'].present?
@@ -40,10 +41,11 @@
                 %img{:alt => "", :src => "/2011/images/commonAvatar.png"}
             %h4
               = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, presenter["name"])
-            - if affiliation = presenter["affiliation"]
-              %p.affiliation= RubyKaigi2011::Localizer.value_for_locale(I18n.locale, affiliation)
-            %p
-              = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, presenter["bio"])
+            - if @event.sub_events.blank?
+              - if affiliation = presenter["affiliation"]
+                %p.affiliation= RubyKaigi2011::Localizer.value_for_locale(I18n.locale, affiliation)
+              %p
+                = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, presenter["bio"])
     -#%h3.cboth
       #{t(:presentation_material)}
     -#%p -
