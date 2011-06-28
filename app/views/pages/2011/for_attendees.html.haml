@@ -238,4 +238,20 @@
             1024 x 1024
       %p
         %img{:alt => "Wallpapers", :src => '/2011/goodies/wallpapers01/thumb.jpg'}
-    != render :partial => 'shared/2011/back_to_top'
+      %h3
+        #{t(:wallpapers)} #{t(:for_slide)}
+      .download
+        %dl
+          %dt
+            %a{:href => "/2011/goodies/wallpapers02/1600x1200white.jpg"}
+              %img{:src => "/2011/images/commonBtnDownload.png", :alt => "Download"}
+          %dd
+            White
+          %dt
+            %a{:href => "/2011/goodies/wallpapers02/1600x1200black.jpg"}
+              %img{:src => "/2011/images/commonBtnDownload.png", :alt => "Download"}
+          %dd
+            Black
+      %p
+        %img{:alt => "Wallpapers", :src => '/2011/goodies/wallpapers02/thumb.png'}
+!= render :partial => 'shared/2011/back_to_top'
