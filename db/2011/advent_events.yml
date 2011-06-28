@@ -261,3 +261,25 @@ tkbb_rubykaigi:
   url: 'http://atnd.org/events/17309'
   location: 'Rhino and Bird [<a href="http://www.rhino-bird.com/">URL</a>]'
   pub_date: '2011-06-24'
+
+kintsuba_sweets:
+  hosted_by_en: 'Kintsuba Sweets (#kintsuba)'
+  hosted_by_ja: 'きんつばスイーツの会 (#kintsuba)'
+  name_en: 'Kintsuba Sweets'
+  name_ja: 'きんつばスイーツの会'
+  dtstart: '2011-07-02 13:30'
+  dtend: '2011-07-02 17:30'
+  url: 'https://gist.github.com/1043321'
+  location: 'Seika-cho, Kyoto, JAPAN'
+  pub_date: '2011-06-27'
+
+ruby_tokai:
+  hosted_by_en: 'Ruby Tokai (@rubytokai)'
+  hosted_by_ja: 'Ruby東海 (@rubytokai)'
+  name_en: 'Ruby Tokai Meetup'
+  name_ja: 'Ruby東海第22回勉強会'
+  dtstart: '2011-07-08 19:00'
+  dtend: '2011-07-08 21:00'
+  url: 'http://wiki.ruby-tokai.org/?%C2%E822%B2%F3%CA%D9%B6%AF%B2%F1'
+  location: '株式会社ニューキャスト 名古屋本社 [<a href="http://maps.google.com/maps/ms?msid=212189921490393774253.00046a8dab003297e65de&msa=0&ll=35.169752,136.927848&spn=0.002863,0.004506">Google Map</a>]'
+  pub_date: '2011-06-28'
