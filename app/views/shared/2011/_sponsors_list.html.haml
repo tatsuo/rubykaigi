@@ -1,46 +1,47 @@
-%section#sponsorsList
-  %section#ruby
-    %h2
-      %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderRuby.png", :width => "300"}
-    %ul
-      - RubyKaigi2011::RubySponsor.all.each do |sponsor|
-        %li
-          %a{:href => "/2011/#{current_locale}/sponsors_ruby_#{sponsor._id}"}
-            %img{:alt => "", :src => "/2011/sponsors/#{sponsor._id}.png", :width => "130"}
-  %section#platinum
-    %h2
-      %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderPlatinum.png", :width => "300"}
-    %ul
-      - RubyKaigi2011::PlatinumSponsor.all.each do |sponsor|
-        %li
-          %a{:href => "/2011/#{current_locale}/sponsors_platinum##{sponsor._id}"}
-            %img{:alt => "", :src => "/2011/sponsors/#{sponsor._id}.png", :width => "110"}
-    %p{:class => "right cboth"}
-      %a{:href => "/2011/#{current_locale}/sponsors_platinum", :class => "linkMark"}
-        #{t(:platinum_sponsor)}
-  %section#gold
-    %h2
-      %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderGold.png", :width => "300"}
-    %ul
-      - RubyKaigi2011::GoldSponsor.all.each do |sponsor|
-        %li
-          %a{:href => "/2011/#{current_locale}/sponsors_gold##{sponsor._id}"}
-            %img{:alt => "", :src => "/2011/sponsors/#{sponsor._id}.png"}
-    %p{:class => "right cboth"}
-      %a{:href => "/2011/#{current_locale}/sponsors_gold", :class => "linkMark"}
-        #{t(:gold_sponsor)}
-  %section#individual
-    %h2
-      %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderIndividual.png", :width => "300"}
-    %ul
-      - if ((sponsors = Contribution.individual_sponsors_of(2011)).present?)
-        - sponsors.each do |sponsor|
+- cache "sponsors_list-#{current_locale}" do
+  %section#sponsorsList
+    %section#ruby
+      %h2
+        %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderRuby.png", :width => "300"}
+      %ul
+        - RubyKaigi2011::RubySponsor.all.each do |sponsor|
           %li
-            - img = img_tag_for_individual_sponsor(sponsor)
-            != link_to_if((!sponsor.anonymous? && sponsor.link_url.present?), raw(img), sponsor.link_url)
-            %a{:href => "#"}
-      - else
-        %li (Not Yet)
-    %p{:class => "right cboth"}
-      %a{:href => "/2011/#{current_locale}/sponsors_individual", :class => "linkMark"}
-        #{t(:individual_sponsor)}
+            %a{:href => "/2011/#{current_locale}/sponsors_ruby_#{sponsor._id}"}
+              %img{:alt => "", :src => "/2011/sponsors/#{sponsor._id}.png", :width => "130"}
+    %section#platinum
+      %h2
+        %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderPlatinum.png", :width => "300"}
+      %ul
+        - RubyKaigi2011::PlatinumSponsor.all.each do |sponsor|
+          %li
+            %a{:href => "/2011/#{current_locale}/sponsors_platinum##{sponsor._id}"}
+              %img{:alt => "", :src => "/2011/sponsors/#{sponsor._id}.png", :width => "110"}
+      %p{:class => "right cboth"}
+        %a{:href => "/2011/#{current_locale}/sponsors_platinum", :class => "linkMark"}
+          #{t(:platinum_sponsor)}
+    %section#gold
+      %h2
+        %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderGold.png", :width => "300"}
+      %ul
+        - RubyKaigi2011::GoldSponsor.all.each do |sponsor|
+          %li
+            %a{:href => "/2011/#{current_locale}/sponsors_gold##{sponsor._id}"}
+              %img{:alt => "", :src => "/2011/sponsors/#{sponsor._id}.png"}
+      %p{:class => "right cboth"}
+        %a{:href => "/2011/#{current_locale}/sponsors_gold", :class => "linkMark"}
+          #{t(:gold_sponsor)}
+    %section#individual
+      %h2
+        %img{:alt => "", :height => "50", :src => "/2011/images/sponsorsHeaderIndividual.png", :width => "300"}
+      %ul
+        - if ((sponsors = Contribution.individual_sponsors_of(2011)).present?)
+          - sponsors.each do |sponsor|
+            %li
+              - img = img_tag_for_individual_sponsor(sponsor)
+              != link_to_if((!sponsor.anonymous? && sponsor.link_url.present?), raw(img), sponsor.link_url)
+              %a{:href => "#"}
+        - else
+          %li (Not Yet)
+      %p{:class => "right cboth"}
+        %a{:href => "/2011/#{current_locale}/sponsors_individual", :class => "linkMark"}
+          #{t(:individual_sponsor)}
