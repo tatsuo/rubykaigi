@@ -316,3 +316,14 @@ matsuerubykaigi03:
   url: "http://regional.rubykaigi.org/matsue03"
   location: "松江テルサ 4F 大会議室 (島根県松江市朝日町478番地18)"
   pub_date: '2011-07-03'
+
+unagi_rubykaigi:
+  hosted_by_en: 'Unagi RubyKaigi 2011 Team (#unagirb)'
+  hosted_by_ja: 'うなぎRubyKaigi会議2011実行委員会 (#unagirb)'
+  name_en: 'Unagi RubyKaigi 2011'
+  name_ja: 'うなぎRuby会議2011'
+  dtstart: '2011-07-10 11:00'
+  dtend: '2011-07-10 15:00'
+  url: 'http://twitter.com/koichiroo/status/86410248239325184'
+  location: 'Meguro Station(Tokyo, Japan)'
+  pub_date: '2011-06-30'
