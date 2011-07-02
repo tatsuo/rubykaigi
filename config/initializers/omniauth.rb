@@ -3,8 +3,14 @@ require 'openid/store/filesystem'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :twitter, configatron.twitter.consumer_key, configatron.twitter.consumer_secret
-  provider :open_id, OpenID::Store::Filesystem.new(Rails.root + 'tmp/openid')
   provider :password, configatron.password_secret, :identifier_key => 'username'
+
+  openid_filesystem = OpenID::Store::Filesystem.new(Rails.root + 'tmp/openid')
+  provider :open_id, openid_filesystem, :name => 'google', :identifier      => 'https://www.google.com/accounts/o8/id'
+  provider :open_id, openid_filesystem, :name => 'yahoo', :identifier       => 'http://yahoo.com'
+  provider :open_id, openid_filesystem, :name => 'yahoo_japan', :identifier => 'http://yahoo.co.jp'
+  provider :open_id, openid_filesystem, :name => 'mixi', :identifier        => 'http://mixi.jp'
+  provider :open_id, openid_filesystem, :name => 'open_id'
 end
 
 require 'digest/sha1'

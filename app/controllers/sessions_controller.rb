@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"].symbolize_keys
+    Rails.logger.debug auth.inspect
 
     if authentication = Authentication.where(:provider => auth[:provider], :uid => auth[:uid]).first
       session[:user_id] = authentication.rubyist_id

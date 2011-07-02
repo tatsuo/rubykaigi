@@ -62,28 +62,27 @@
           = link_to t(:remove_authentication), account_authentication_path(authentication), :confirm => "Are you sure?", :method => :delete, :class => "remove" if user.multi_account?
         .uid= authentication.uid
 
-
   %h3= t(:add_new_authentication)
   %ul#associate_login
     - unless user.authentications.exists?('twitter')
       %li
         %a.provider{:href => "/auth/twitter"}
           = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
-    - unless user.authentications.exists?('https://www.google.com')
+    - unless user.authentications.exists?('google')
       %li
-        %a.provider{:href => "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"}
+        %a.provider{:href => "/auth/google"}
           = image_tag "/2011/images/registerBtnGoogle.png", :alt => "via Google"
-    - unless user.authentications.exists?('http://yahoo.com')
+    - unless user.authentications.exists?('yahoo')
       %li
-        %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.com"}
+        %a.provider{:href => "/auth/yahoo"}
           = image_tag "/2011/images/registerBtnYahoo.png", :alt => "via Yahoo!"
-    - unless user.authentications.exists?('http://yahoo.co.jp')
+    - unless user.authentications.exists?('yahoo_japan')
       %li
-        %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.co.jp"}
+        %a.provider{:href => "/auth/yahoo_japan"}
           = image_tag "/2011/images/registerBtnYahooJapan.png", :alt => "via Yahoo!Japan"
-    - unless user.authentications.exists?('http://mixi.jp')
+    - unless user.authentications.exists?('mixi')
       %li
-        %a.provider{:href => "/auth/open_id?openid_url=http://mixi.jp"}
+        %a.provider{:href => "/auth/mixi"}
           = image_tag "/2011/images/registerBtnMixi.png", :alt => "via mixi"
     %li
       %a.provider{:href => "/auth/open_id"}
