@@ -3,7 +3,7 @@
 #content
   %h1= @title
 
-  %h2 アカウント設定
+  %h2= t(:account_settings)
 
   = form_for @rubyist, :url => account_path do |form|
     != render :partial => form
@@ -51,19 +51,19 @@
           float: left
           margin-right: 0.8em
 
-  %h2 アカウントの関連付け
-  %h3 関連付けられているアカウント
+  %h2= t(:authentications)
+  %h3= t(:added_authentications)
   %ul#authentications
     - user.authentications.each do |authentication|
       %li.authentication
         .provider
           = image_tag "authbuttons/#{authentication.provider}_32.png", :size => "32x32"
           = authentication.provider.classify
-          = link_to "解除", account_authentication_path(authentication), :confirm => 'このサービスとログインアカウントの紐付けを解除しますか?', :method => :delete, :class => "remove" if user.multi_account?
+          = link_to t(:remove_authentication), account_authentication_path(authentication), :confirm => "Are you sure?", :method => :delete, :class => "remove" if user.multi_account?
         .uid= authentication.uid
 
 
-  %h3 新たに関連を追加する
+  %h3= t(:add_new_authentication)
   %ul#associate_login
     %li
       %a.provider{:href => "/auth/twitter"}

@@ -158,3 +158,7 @@ ja:
   for_slide: "(スライド用)"
   neribun_with_location: "練馬文化センター (東京都練馬区)"
   advent_joinus: "RubyKaigi Advent Calendar 2011 にご参加ください"
+  authentications: 'アカウントの関連付け'
+  added_authentications: '次のアカウントを使用してログインできます'
+  add_new_authentication: '別のサービスを追加する'
+  remove_authentication: '解除'

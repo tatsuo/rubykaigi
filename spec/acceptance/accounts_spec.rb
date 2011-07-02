@@ -1,6 +1,6 @@
 require 'acceptance/acceptance_helper'
 
-feature "既存のアカウントに他のプロバイダのアカウントを紐付ける" do
+feature "既存のアカウントに他のプロバイダのアカウントを関連付ける" do
   include_context 'signout after all'
 
   # TODO 2つ目以降のscenarioでBlueprintがうまく動かない(No blueprint for class Authentication)
@@ -28,7 +28,7 @@ feature "既存のアカウントに他のプロバイダのアカウントを�
     click_link I18n.t('account_settings')
   end
 
-  scenario "紐付けられているアカウント一覧が表示されていること" do
+  scenario "関連付けられているアカウント一覧が表示されていること" do
     authentication = rubyist.authentications.first
 
     find('#authentications .provider').should have_content(authentication.provider.classify)
@@ -81,7 +81,7 @@ feature "紐づいているアカウント情報の削除" do
 
   scenario "紐づいているアカウントが1つしかない場合は削除することはできない" do
     find('#authentications .provider a.remove').click
-    find('#authentications .provider').should_not have_content('解除')
+    find('#authentications .provider').should_not have_content(I18n.t(:remove_authentication))
   end
 end
 
