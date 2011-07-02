@@ -3,13 +3,13 @@ class RenameAuthenticationProviders < ActiveRecord::Migration
     ActiveRecord::Base.transaction do
       Authentication.where(:provider => 'open_id').map do |authentication|
         provider = case authentication.uid
-                   when /^https:\/\/www.google.com\/accounts\/o8\/id/
+                   when /^https:\/\/www\.google\.com\/accounts\/o8\/id/
                      'google'
-                   when /^http:\/\/yahoo.com/
+                   when /^https:\/\/me\.yahoo\.com\/a/
                      'yahoo'
-                   when /^http:\/\/yahoo.co.jp/
+                   when /^https:\/\/me\.yahoo\.co\.jp\/a/
                      'yahoo_japan'
-                   when /^http:\/\/mixi.jp/
+                   when /^https:\/\/id\.mixi\.jp/
                      'mixi'
                    else
                      'open_id'
