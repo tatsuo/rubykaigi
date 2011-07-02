@@ -3,6 +3,8 @@
 #content
   %h1= @title
 
+  %h2 アカウント設定
+
   = form_for @rubyist, :url => account_path do |form|
     != render :partial => form
 
@@ -35,6 +37,46 @@
     <br /><br /><br />
     != form.submit 'Save'
 
-  %hr
+  %style(type='text/css')
+    :sass
+      ul#authentications
+        list-style: none
+        li.authentication
+          margin-bottom: 0.8em
+          .uid
+            font-size: 0.8em
+      ul#associate_login
+        list-style: none
+        li
+          float: left
+          margin-right: 0.8em
 
-  !=link_to t(:dashboard), dashboard_path
+  %h2 アカウントの関連付け
+  %h3 関連付けられているアカウント
+  %ul#authentications
+    - user.authentications.each do |authentication|
+      %li.authentication
+        .provider
+          = image_tag "authbuttons/#{authentication.provider}_32.png", :size => "32x32"
+          = authentication.provider.classify
+          = link_to "解除", account_authentication_path(authentication), :confirm => 'このサービスとログインアカウントの紐付けを解除しますか?', :method => :delete, :class => "remove"
+        .uid= authentication.uid
+
+
+  %h3 新たに関連を追加する
+  %ul#associate_login
+    %li
+      %a.provider{:href => "/auth/twitter"}
+        = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
+    %li
+      %a.rovider{:href => "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"}
+        = image_tag "/2011/images/registerBtnGoogle.png", :alt => "via Google"
+    %li
+      %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.com"}
+        = image_tag "/2011/images/registerBtnYahoo.png", :alt => "via Yahoo!"
+    %li
+      %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.co.jp"}
+        = image_tag "/2011/images/registerBtnYahooJapan.png", :alt => "via Yahoo!Japan"
+    %li
+      %a.provider{:href => "/auth/open_id?openid_url=http://mixi.jp"}
+        = image_tag "/2011/images/registerBtnMixi.png", :alt => "via mixi"

@@ -22,7 +22,10 @@ Rubykaigi::Application.routes.draw do
 
   match 'my_tickets', :to => 'tickets#index', :as => "my_tickets"
 
-  resource :account
+  resource :account do
+    resources :authentications#, :only => %w(destroy)
+  end
+
   resources :rubyists
 
   resources :carts do

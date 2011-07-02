@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   layout_for_latest_ruby_kaigi
 
+  protect_from_forgery :except => :create
+
   def new
   end
 
@@ -10,6 +12,12 @@ class SessionsController < ApplicationController
     if authentication = Authentication.where(:provider => auth[:provider], :uid => auth[:uid]).first
       session[:user_id] = authentication.rubyist_id
       redirect_to session.delete(:return_to) || dashboard_path
+
+    elsif user
+      user.authentications.create! :provider => auth[:provider], :uid => auth[:uid]
+      flash[:notice] = "アカウントにサービスを紐づけました"
+      redirect_to edit_account_path
+
     else
       if auth[:provider] == 'password'
         flash[:error] = "Authentication error: Invalid username or password"
@@ -22,7 +30,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :user_id
+    reset_session
     redirect_to signin_path, :notice => 'You have signed out successfully'
   end
 
