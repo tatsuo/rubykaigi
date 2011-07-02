@@ -3,7 +3,7 @@ class AuthenticationsController < ApplicationController
 
   def destroy
     if user.multi_account?
-      authentication = user.authentications.where(:id => params[:id]).last
+      authentication = user.authentications.find(params[:id])
       authentication.destroy
     end
 

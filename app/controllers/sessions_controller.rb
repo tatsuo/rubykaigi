@@ -8,20 +8,18 @@ class SessionsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"].symbolize_keys
-    Rails.logger.debug auth.inspect
 
-    if authentication = Authentication.where(:provider => auth[:provider], :uid => auth[:uid]).first
+    if authentication = Authentication.where(auth.slice(:provider, :uid)).first
       session[:user_id] = authentication.rubyist_id
       redirect_to session.delete(:return_to) || dashboard_path
 
     elsif user
-      user.authentications.create! :provider => auth[:provider], :uid => auth[:uid]
-      flash[:notice] = "アカウントにサービスを紐づけました"
-      redirect_to edit_account_path
+      user.authentications.create! auth.slice(:provider, :uid)
+      redirect_to edit_account_path, :notice => 'Your new authentication has been saved.'
 
     else
       if auth[:provider] == 'password'
-        flash[:error] = "Authentication error: Invalid username or password"
+        flash[:error] = 'Authentication error: Invalid username or password'
         redirect_to signin_path
       else
         store_auth_params(auth)
@@ -31,6 +29,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    @user = nil
     reset_session
     redirect_to signin_path, :notice => 'You have signed out successfully'
   end
