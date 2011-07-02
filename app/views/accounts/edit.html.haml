@@ -64,23 +64,23 @@
 
   %h3= t(:add_new_authentication)
   %ul#associate_login
-    - unless user.authentications.exists?('twitter')
+    - unless user.authentications.by_provider('twitter').exists?
       %li
         %a.provider{:href => "/auth/twitter"}
           = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
-    - unless user.authentications.exists?('google')
+    - unless user.authentications.by_provider('google').exists?
       %li
         %a.provider{:href => "/auth/google"}
           = image_tag "/2011/images/registerBtnGoogle.png", :alt => "via Google"
-    - unless user.authentications.exists?('yahoo')
+    - unless user.authentications.by_provider('yahoo').exists?
       %li
         %a.provider{:href => "/auth/yahoo"}
           = image_tag "/2011/images/registerBtnYahoo.png", :alt => "via Yahoo!"
-    - unless user.authentications.exists?('yahoo_japan')
+    - unless user.authentications.by_provider('yahoo_japan').exists?
       %li
         %a.provider{:href => "/auth/yahoo_japan"}
           = image_tag "/2011/images/registerBtnYahooJapan.png", :alt => "via Yahoo!Japan"
-    - unless user.authentications.exists?('mixi')
+    - unless user.authentications.by_provider('mixi').exists?
       %li
         %a.provider{:href => "/auth/mixi"}
           = image_tag "/2011/images/registerBtnMixi.png", :alt => "via mixi"
