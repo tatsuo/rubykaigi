@@ -59,7 +59,7 @@
         .provider
           = image_tag "authbuttons/#{authentication.provider}_32.png", :size => "32x32"
           = authentication.provider.classify
-          = link_to "解除", account_authentication_path(authentication), :confirm => 'このサービスとログインアカウントの紐付けを解除しますか?', :method => :delete, :class => "remove"
+          = link_to "解除", account_authentication_path(authentication), :confirm => 'このサービスとログインアカウントの紐付けを解除しますか?', :method => :delete, :class => "remove" if user.multi_account?
         .uid= authentication.uid
 
 
@@ -69,7 +69,7 @@
       %a.provider{:href => "/auth/twitter"}
         = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
     %li
-      %a.rovider{:href => "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"}
+      %a.provider{:href => "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"}
         = image_tag "/2011/images/registerBtnGoogle.png", :alt => "via Google"
     %li
       %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.com"}
