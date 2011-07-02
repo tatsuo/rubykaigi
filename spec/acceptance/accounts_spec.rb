@@ -8,7 +8,7 @@ feature "既存のアカウントに他のプロバイダのアカウントを�
 
   let(:openid_hash) {
     {
-      :provider  => 'open_id',
+      :provider  => 'google',
       :uid       => 'https://www.google.com/accounts/o8/id?i://www.google.com/accounts/o8/id?id=hibariya',
       :user_info => {:email => 'hibariya@gmail.com', :name => 'Hibariya Hi'}
     }
@@ -22,7 +22,7 @@ feature "既存のアカウントに他のプロバイダのアカウントを�
       :uid       => authentication.uid
     }
 
-    OmniAuth.config.mock_auth[:open_id] = openid_hash
+    OmniAuth.config.mock_auth[:google] = openid_hash
 
     visit '/auth/twitter'
     click_link I18n.t('account_settings')
@@ -39,7 +39,7 @@ feature "既存のアカウントに他のプロバイダのアカウントを�
     authentication = rubyist.authentications.first
     click_link 'via Google'
 
-    find('#authentications .provider').should have_content('OpenId')
+    find('#authentications .provider').should have_content('Google')
     find('#authentications .uid').should have_content(openid_hash[:uid])
   end
 end
@@ -52,7 +52,7 @@ feature "紐づいているアカウント情報の削除" do
       :username        => 'hibariya',
       :authentications => [
         Authentication.new(:provider => 'twitter', :uid => '12345'),
-        Authentication.new(:provider => 'open_id', :uid => 'https://www.google.com/accounts/o8/id?i://www.google.com/accounts/o8/id?id=hibariya')
+        Authentication.new(:provider => 'google', :uid => 'https://www.google.com/accounts/o8/id?i://www.google.com/accounts/o8/id?id=hibariya')
       ]
     )
   }
@@ -70,7 +70,7 @@ feature "紐づいているアカウント情報の削除" do
   end
 
   scenario "紐づいているプロバイダのアカウント情報が削除できること" do
-    authentication = rubyist.authentications.where(:provider => 'open_id').first
+    authentication = rubyist.authentications.where(:provider => 'google').first
 
     provider_el = all('#authentications .provider').detect {|p| p.has_content?(authentication.provider.classify) }
     provider_el.find('a.remove').click
