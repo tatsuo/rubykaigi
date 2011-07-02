@@ -5,7 +5,15 @@ class Rubyist < ActiveRecord::Base
 
   has_many :contributions
   has_many :tickets
-  has_many :authentications
+  has_many :authentications do
+    def exists?(provider_or_domain)
+      if provider_or_domain =~ URI.regexp
+        by_openid_domain(provider_or_domain).present?
+      else
+        by_provider(provider_or_domain).present?
+      end
+    end
+  end
 
   validates_uniqueness_of :username, :case_sensitive => false
   validates_format_of :username, :with => /^[a-zA-Z0-9_-]+$/, :message => I18n.t('should_be_alphabetical')

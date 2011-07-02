@@ -7,6 +7,9 @@ class Authentication < ActiveRecord::Base
   validates :provider, :presence => true
   validates :password, :confirmation => true, :if => :changing_password?
 
+  scope :by_provider, lambda {|provider| where(:provider => provider) }
+  scope :by_openid_domain, lambda {|domain| where(:provider => 'open_id').where('uid like ?', "#{domain}%") }
+
   validate do
     if changing_password?
       errors.add(:current_password, :invalid) unless valid_password?(current_password)

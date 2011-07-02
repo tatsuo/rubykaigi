@@ -65,18 +65,26 @@
 
   %h3= t(:add_new_authentication)
   %ul#associate_login
+    - unless user.authentications.exists?('twitter')
+      %li
+        %a.provider{:href => "/auth/twitter"}
+          = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
+    - unless user.authentications.exists?('https://www.google.com')
+      %li
+        %a.provider{:href => "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"}
+          = image_tag "/2011/images/registerBtnGoogle.png", :alt => "via Google"
+    - unless user.authentications.exists?('http://yahoo.com')
+      %li
+        %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.com"}
+          = image_tag "/2011/images/registerBtnYahoo.png", :alt => "via Yahoo!"
+    - unless user.authentications.exists?('http://yahoo.co.jp')
+      %li
+        %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.co.jp"}
+          = image_tag "/2011/images/registerBtnYahooJapan.png", :alt => "via Yahoo!Japan"
+    - unless user.authentications.exists?('http://mixi.jp')
+      %li
+        %a.provider{:href => "/auth/open_id?openid_url=http://mixi.jp"}
+          = image_tag "/2011/images/registerBtnMixi.png", :alt => "via mixi"
     %li
-      %a.provider{:href => "/auth/twitter"}
-        = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
-    %li
-      %a.provider{:href => "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"}
-        = image_tag "/2011/images/registerBtnGoogle.png", :alt => "via Google"
-    %li
-      %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.com"}
-        = image_tag "/2011/images/registerBtnYahoo.png", :alt => "via Yahoo!"
-    %li
-      %a.provider{:href => "/auth/open_id?openid_url=http://yahoo.co.jp"}
-        = image_tag "/2011/images/registerBtnYahooJapan.png", :alt => "via Yahoo!Japan"
-    %li
-      %a.provider{:href => "/auth/open_id?openid_url=http://mixi.jp"}
-        = image_tag "/2011/images/registerBtnMixi.png", :alt => "via mixi"
+      %a.provider{:href => "/auth/open_id"}
+        or another OpenID provider
