@@ -1,11 +1,5 @@
 require 'acceptance/acceptance_helper'
 
-shared_context 'signout after all' do
-  after :all do
-    click_link 'Sign out' rescue nil # XXX scenarioが上から順番に実行されるわけではないらしいので必要。rescue nilどうにかしたい
-  end
-end
-
 feature 'ユーザとして初めてOAuthでログインする' do
   include_context 'signout after all'
 
@@ -37,12 +31,12 @@ feature 'ユーザとして初めてOpenIDでログインする' do
   include_context 'signout after all'
 
   background do
-    OmniAuth.config.mock_auth[:open_id] = {
-      :provider  => 'open_id',
+    OmniAuth.config.mock_auth[:google] = {
+      :provider  => 'google',
       :uid       => 'https://www.google.com/accounts/o8/id?i://www.google.com/accounts/o8/id?id=hibariya',
       :user_info => {:email => 'hibariya@gmail.com', :name => 'Hibariya Hi'}
     }
-    visit '/auth/open_id'
+    visit '/auth/google'
   end
 
   scenario '認証後にはアカウント編集画面が表示されること' do

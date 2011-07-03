@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.configure do |config|
   Capybara.use_default_driver
-  config.include Capybara, :type => :acceptance
+  config.include Capybara::DSL, :type => :acceptance
 end
 
 # Put your acceptance spec helpers inside /spec/acceptance/support

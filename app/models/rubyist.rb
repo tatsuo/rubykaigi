@@ -93,6 +93,10 @@ class Rubyist < ActiveRecord::Base
     end
   end
 
+  def multi_account?
+    authentications.count > 1
+  end
+
   private
   def contribution_types_of(kaigi_year)
     contributions.select {|c| c.ruby_kaigi.year == kaigi_year }.map(&:contribution_type)
