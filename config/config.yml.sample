@@ -21,6 +21,9 @@ development: &local
     consumer_secret: twitter_consumer_secret
     access_token: twitter_access_token
     access_secret: twitter_access_secret
+  github:
+    client_id: github_client_id
+    secret: github_client_secret_key
   password_secret: omniauth_password_secret
 
 production:
