@@ -224,9 +224,11 @@ article#team {
      margin: 0 5px 20px 0;
      width: 120px;
      float: left; }
-   input[name=openid_identifier] {
-     padding-left: 20px;
-     background: #fff url(/images/openid_logo.gif) 2px center no-repeat; } }
+   input[type=text],
+   input[type=password] {
+     width: 300px;
+     font-size: 120%;
+     padding: 5px; } }
 
 /*--- schedule ----------------------------------------------*/
 
