@@ -129,7 +129,7 @@ ActiveRecord::Schema.define(:version => 20110702153545) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "purchased_at"
-    t.integer  "price",                                             :null => false
+    t.integer  "price",                          :default => 0,     :null => false
     t.integer  "paypal_payment_notification_id"
     t.integer  "ruby_kaigi_id",                  :default => 5,     :null => false
     t.string   "invoice_code",                                      :null => false
@@ -180,11 +180,11 @@ ActiveRecord::Schema.define(:version => 20110702153545) do
   end
 
   create_table "ruby_kaigis", :force => true do |t|
-    t.integer  "year",                 :null => false
+    t.integer  "year",                                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "capacity",             :null => false
-    t.integer  "party_capacity",       :null => false
+    t.integer  "capacity",             :default => 0, :null => false
+    t.integer  "party_capacity",       :default => 0, :null => false
     t.datetime "registration_open_at"
   end
 
