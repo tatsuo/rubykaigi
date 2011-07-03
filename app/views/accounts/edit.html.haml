@@ -68,6 +68,10 @@
       %li
         %a.provider{:href => "/auth/twitter"}
           = image_tag "/2011/images/registerBtnTwitter.png", :alt => "via Twitter"
+    - unless user.authentications.by_provider('github').exists?
+      %li
+        %a.provider{:href => "/auth/github"}
+          = image_tag "/2011/images/registerBtnGithub.png", :alt => "via Github"
     - unless user.authentications.by_provider('google').exists?
       %li
         %a.provider{:href => "/auth/google"}
