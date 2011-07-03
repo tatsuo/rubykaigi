@@ -18,13 +18,13 @@
     %p.btn
       != link_to image_tag('/2011/images/registerBtnGithub.png', :alt => 'via github'), "/auth/github"
     %p.btn
-      != link_to image_tag('/2011/images/registerBtnGoogle.png', :alt => 'via Google'), "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id"
+      != link_to image_tag('/2011/images/registerBtnGoogle.png', :alt => 'via Google'), "/auth/google"
     %p.btn
-      != link_to image_tag('/2011/images/registerBtnYahoo.png', :alt => 'via Yahoo!'), "/auth/open_id?openid_url=http://yahoo.com"
+      != link_to image_tag('/2011/images/registerBtnYahoo.png', :alt => 'via Yahoo!'), "/auth/yahoo"
     %p.btn
-      != link_to image_tag('/2011/images/registerBtnYahooJapan.png', :alt => 'via Yahoo!JAPAN'), "/auth/open_id?openid_url=http://yahoo.co.jp"
+      != link_to image_tag('/2011/images/registerBtnYahooJapan.png', :alt => 'via Yahoo!JAPAN'), "/auth/yahoo_japan"
     %p.btn
-      != link_to image_tag('/2011/images/registerBtnMixi.png', :alt => 'via mixi'), "/auth/open_id?openid_url=http://mixi.jp"
+      != link_to image_tag('/2011/images/registerBtnMixi.png', :alt => 'via mixi'), "/auth/mixi"
     %p.cleft
       or signin via other OpenID providers:
       != form_tag "/auth/open_id", :method => :get do

@@ -156,3 +156,7 @@ en:
   wallpapers: "Wallpapers"
   for_slide: "(for slide)"
   neribun_with_location: "Nerima Culture Center (Tokyo, Japan)"
+  authentications: 'Authentications'
+  added_authentications: 'You can sign in to this account using following services.'
+  add_new_authentication: 'Add another service to sign in.'
+  remove_authentication: 'Remove'

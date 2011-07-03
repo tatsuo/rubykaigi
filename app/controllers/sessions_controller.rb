@@ -1,18 +1,25 @@
 class SessionsController < ApplicationController
   layout_for_latest_ruby_kaigi
 
+  protect_from_forgery :except => :create
+
   def new
   end
 
   def create
     auth = request.env["omniauth.auth"].symbolize_keys
 
-    if authentication = Authentication.where(:provider => auth[:provider], :uid => auth[:uid]).first
+    if authentication = Authentication.where(auth.slice(:provider, :uid)).first
       session[:user_id] = authentication.rubyist_id
       redirect_to session.delete(:return_to) || dashboard_path
+
+    elsif user
+      user.authentications.create! auth.slice(:provider, :uid)
+      redirect_to edit_account_path, :notice => 'Your new authentication has been saved.'
+
     else
       if auth[:provider] == 'password'
-        flash[:error] = "Authentication error: Invalid username or password"
+        flash[:error] = 'Authentication error: Invalid username or password'
         redirect_to signin_path
       else
         store_auth_params(auth)
@@ -22,7 +29,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :user_id
+    @user = nil
+    reset_session
     redirect_to signin_path, :notice => 'You have signed out successfully'
   end
 

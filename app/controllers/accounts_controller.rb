@@ -37,8 +37,7 @@ class AccountsController < ApplicationController
         password_auth.change_password! params.slice(:current_password, :password, :password_confirmation)
       end
 
-      flash[:notice] = 'Your settings have been saved.'
-      redirect_to edit_account_path
+      redirect_to edit_account_path, :notice => 'Your settings have been saved.'
     end
   rescue ActiveRecord::RecordInvalid
     @rubyist = user
