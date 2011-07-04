@@ -3,7 +3,7 @@
   - if headlines.present?
     - headlines.each do |e|
       %li
-        - datetime = l(e.time.to_date, :format => "%Y-%m-%d")
+        - datetime = l(e.time.to_date)
         %time{:datetime => datetime} #{datetime}
         != link_to h(e.title), e.link
   - else
