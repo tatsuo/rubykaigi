@@ -9,7 +9,7 @@
     - @timetable.days.each do |date|
       %div
         %h2
-          %time{:datetime => date.strftime('%Y-%m-%d')}
+          %time{:datetime => l(date, :format => :default)}
             = l date, :format => :schedule_grid
         %table
           %colgroup.hours
