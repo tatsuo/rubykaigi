@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 describe Rubyist do
@@ -53,5 +54,47 @@ describe Rubyist do
 
     it { second.should_not be_valid }
     it { second.tap(&:valid?).errors[:username].should_not be_blank }
+  end
+
+  describe "#gravatar_email" do
+    context "when default" do
+      subject { Rubyist.make(:username => 'kakutani', :email => 'kakutani@example.com') }
+      its(:email) { should == "kakutani@example.com" }
+      its(:gravatar_email) { should == "kakutani@example.com" }
+    end
+
+    context "個別にメールアドレスを設定した場合" do
+      subject { Rubyist.make(:username => 'kakutani',
+          :email => 'kakutani@example.com',
+          :gravatar_email => 'shintaro@example.com') }
+
+      its(:email) { should == "kakutani@example.com" }
+      its(:gravatar_email) { should == "shintaro@example.com" }
+    end
+
+    context "gravaterに空文字を設定した場合" do
+      subject { Rubyist.make(:username => 'kakutani',
+          :email => 'kakutani@example.com',
+          :gravatar_email => '') }
+      its(:email) { should == "kakutani@example.com" }
+      its(:gravatar_email) { should be_blank }
+    end
+  end
+
+  describe "#gravatar_url" do
+    context "設定されている" do
+      subject { Rubyist.make(:username => 'kakutani',
+          :email => 'kakutani@example.com',
+          :gravatar_email => 'shintaro@example.com') }
+      its(:gravatar_url) { should_not == "/images/bow_face.png" }
+    end
+
+    context "設定されていない" do
+      subject { Rubyist.make(:username => 'kakutani',
+          :email => 'kakutani@example.com',
+          :gravatar_email => '') }
+      its(:gravatar_url) { should == "/images/bow_face.png" }
+    end
+
   end
 end

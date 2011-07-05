@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110702153545) do
+ActiveRecord::Schema.define(:version => 20110705012708) do
 
   create_table "authentications", :force => true do |t|
     t.string   "provider",   :null => false
@@ -200,6 +200,7 @@ ActiveRecord::Schema.define(:version => 20110702153545) do
     t.string   "full_name"
     t.string   "website"
     t.string   "avatar_type",     :default => "default", :null => false
+    t.string   "gravatar_email"
   end
 
   add_index "rubyists", ["identity_url"], :name => "index_rubyists_on_identity_url", :unique => true
