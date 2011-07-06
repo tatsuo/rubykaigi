@@ -10,27 +10,27 @@ presenters:
       en: |-
         A freelance Railer.
         The founder of a Ruby community "Asakusa.rb" http://asakusa.rubyist.net/
-        Probably the most active Rails core contributor as a Japanese.
+        The most active Rails core contributor in Japan.
         The author of several unique and useful gem/plugins for Rails 3, such as Kaminari, hocus_pocus, i18n_generators, etc.
       ja: "フリーランスのRailsプログラマー/コンサルタント。流しのフェロー。\n\
         地域Rubyコミュニティ\"Asakusa.rb\"発起人。\n\
         Rails 3.x用次世代ページネーションライブラリ\"Kaminari\"、魔法のRailsアプリ開発支援ツール\"hocus_pocus\"、Railsアプリ国際化支援ジェネレーター\"i18n_generators\"等の作者。\n\
-        書籍『Head First Rails』の監訳者。"
+        書籍『Rails3レシピブック』の著者(共著)、『Head First Rails』の監訳者。"
     gravatar: 76a777ff80f30bd3b390e275cce625bc
 title:
-  en: Ruby on Rails that doesn't hurt
+  en: Ruby on Rails development that doesn't hurt
   ja: "たのしいRails"
 abstract:
   en: |-
-    Rails seems to be super easy and fun at first. Well, actually it is, but I guess you may face some difficulties and lose your passion as you're getting on it because:
+    Rails seems to be super easy and fun at first. Well, actually it is, but I suspect you may face some difficulties and lose your passion after a while, because:
     * Rails requires you to have wide and deep technical knowledge before and underneath the app development
     * Rails requires you to memorize tons of conventions, APIs, commands, plugins, etc.
-    * Everyone writes about Rails, but 99% of the materials are just rubbish
+    * Everyone writes about Rails, but 99% of the material are just rubbish
     * Rails flies like an arrow. It's hard to keep you and your apps up-to-date
 
     So, here are some hints and tips to get over these problems and make your Rails life happy, worthy and sustainable.
 
-    * This talk is not for Rails GURU
-  ja: "Rails 3.0がリリースされてから約1年間、日々の業務で、個人プロジェクトで、あるいは趣味でRailsをお使いの方も多いことでしょう。 しかし、一見たのしくて簡単に見えるRailsアプリ開発にも様々な障壁があり、必ずしも万人にとって易しいものではないし、最初に感じたたのしさが薄れて苦痛に感じることが増えてくるかもしれません。理由はいくつか考えられるのですが、例えば以下のようなものではないでしょうか。 * 必要とされる前提知識が多すぎてどこから手をつけていいかわからない * 覚えなきゃいけないことが多すぎて覚えきれない * 情報量が多すぎるし、その割に有用な情報が少ない * Rails自体の変化が速すぎてついて行けない\n\
-    そこで、本セッションでは、毎日の開発をたのしく、有意義に、そして生産的に持続させるための、自分なりのコツのようなものをお話しします。 なお、本セッションは、Rails初心者?上級者向けです。超上級者の方にとっては、あまり得るものはないかもしれません。"
+    * This talk is not for Rails guru
+  ja: "Rails 3.0がリリースされてから約1年間、日々の業務で、個人プロジェクトで、あるいは趣味でRailsをお使いの方も多いことでしょう。 しかし、一見たのしくて簡単に見えるRailsアプリ開発にも様々な障壁があり、必ずしも万人にとって易しいものではないし、最初に感じたたのしさが薄れて苦痛に感じることが増えてくるかもしれません。理由はいくつか考えられるのですが、例えば以下のようなものではないでしょうか。 * 必要とされる前提知識が多すぎてどこから手をつけていいかわからない   * 覚えなきゃいけないことが多すぎて覚えきれない   * 情報量が多すぎるし、その割に有用な情報が少ない   * Rails自体の変化が速すぎてついて行けない\n\
+    そこで、本セッションでは、毎日の開発をたのしく、有意義に、そして生産的に持続させるための、自分なりのコツのようなものをお話しします。 なお、本セッションは、Rails初心者〜上級者向けです。超上級者の方にとっては、あまり得るものはないかもしれません。"
 language: Japanese
