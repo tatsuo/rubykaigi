@@ -35,7 +35,7 @@ timeslots:
       2011-07-18T14:30:00+09:00
     event_ids:
       - 18S05
-#      - 18S06 # canceled
+      - 18S06
   - start: *end_of_slot6
     end:   &end_of_slot7
       2011-07-18T14:40:00+09:00
