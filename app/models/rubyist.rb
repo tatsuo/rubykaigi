@@ -84,10 +84,14 @@ class Rubyist < ActiveRecord::Base
     end
   end
 
+  def gravatar_email
+    attributes['gravatar_email'] || email
+  end
+
   # 2011の個人スポンサー用にでっち上げた
   def gravatar_url(size = 42)
-    if email.present?
-      "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email.downcase)}?s=#{size}&d=#{CGI.escape('http://rubykaigi.org/images/bow_face.png')}"
+    if gravatar_email.present?
+      "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(gravatar_email.downcase)}?s=#{size}&d=#{CGI.escape('http://rubykaigi.org/images/bow_face.png')}"
     else
       "/images/bow_face.png"
     end
@@ -95,6 +99,10 @@ class Rubyist < ActiveRecord::Base
 
   def multi_account?
     authentications.count > 1
+  end
+
+  def before_create
+    attributes['gravatar_email'] = self.email if attributes['gravatar_email'].blank?
   end
 
   private

@@ -16,8 +16,13 @@
   %br
   %dt
     != form.label :email
-    (also use to fetch your icon via <a href="http://gravatar.com">gravatar.com</a>)
   %dd!= form.text_field :email
+  %br
+  %dt
+    != form.label :gravatar_email
+  %dd!= form.text_field :gravatar_email
+  (use to fetch your icon via <a href="http://gravatar.com">gravatar.com</a>)
+  %br
   %br
   %dt!= form.label :website
   %dd!= form.text_field :website
@@ -35,4 +40,3 @@
       %label{:for => :password_confirmation} Password Confirmation
     %dd!= password_field_tag :password_confirmation
     %br
-

@@ -69,11 +69,11 @@ timeslots:
       - 17M10
   - start: *end_of_slot12
     end:   &end_of_slot13
-      2011-07-17T19:30:00+09:00
+      2011-07-17T20:00:00+09:00
     event_ids:
       - :transit_time
   - start: *end_of_slot13
     end:   &end_of_slot14
-      2011-07-17T21:30:00+09:00
+      2011-07-17T22:00:00+09:00
     event_ids:
       - :party
