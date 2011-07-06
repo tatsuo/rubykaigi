@@ -4,11 +4,12 @@ presenters:
       en: Ryoichi SEKIGUCHI
       ja: "関口 亮一"
     affiliation: 
-      en: 株式会社ディー・エヌ・エー
-      ja: DeNA Co., Ltd.
+      en: DeNA Co., Ltd.
+      ja: 株式会社ディー・エヌ・エー
     bio: 
       en: "#TODO"
       ja: "#TODO"
+    gravatar: cd07d1d30d4edcc5d5c5fbdd21eb45af
 title: 
   en: The technology behind rubykaigi.org
   ja: "rubykaigi.orgを支える技術"
