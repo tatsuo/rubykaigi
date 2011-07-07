@@ -18,7 +18,7 @@ module RubyKaigi2011
     end
 
     def same_or_contain?(other)
-      self == other || !!self.sub_events.detect {|sub| sub == other }
+      self == other || self.sub_events.any? {|sub| sub == other }
     end
 
     def to_hash
