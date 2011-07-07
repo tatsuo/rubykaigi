@@ -1,19 +1,19 @@
---- 
-name: 
+---
+name:
   en: NaCl
   ja: "株式会社ネットワーク応用通信研究所"
 url: http://www.netlab.jp/
-pr: 
+pr:
   en: |
     http://www.netlab.jp/
-    
+
     Network Applied Communication Laboratory (NaCl) delivers system development solutions utilizing open source software. NaCl drives the Ruby programming language with Ruby creator and NaCl fellow, Yukihiro "Matz" Matsumoto.
 
   ja: "株式会社ネットワーク応用通信研究所(NaCl)\r\n\
     http://www.netlab.jp/\r\n\
     \r\n\
     世界と競い、未来を拓く\r\n\
-    ソースコードを公開して誰でも自由に利用できるようにし、利用者や他の開発者からのフィードバックを取り入れながら進化を続ける、それがオープンソースソフトウェア（OSS）です。 株式会社ネットワーク応用研究所（NaCl）では、単に\r\n\
+    ソースコードを公開して誰でも自由に利用できるようにし、利用者や他の開発者からのフィードバックを取り入れながら進化を続ける、それがオープンソースソフトウェア（OSS）です。 株式会社ネットワーク応用通信研究所（NaCl）では、単に\r\n\
     OSSを利用するだけではなく、オブジェクト指向言語Rubyの開発者であるまつもとゆきひろ をはじめ、多くの社員がOSSの開発に貢献し、 OSSを利用したシステム開発では先進的な実績を残しています。\r\n\
     \r\n\
     ＜Ruby、Ruby on Railsに関する取り組み＞\r\n\
