@@ -16,7 +16,7 @@ module RubyKaigi2011
     end
 
     def contains?(event)
-      !!events.detect {|e| e._id == event._id }
+      !!events.detect {|e| e.same_or_contain?(event) }
     end
 
     def to_hash

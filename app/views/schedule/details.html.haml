@@ -14,13 +14,15 @@
         #{t(:abstract)}
       %p
         = @event.localize(I18n.locale, :abstract)
-        - if @event.sub_events
-          %ol
-            - @event.sub_events.each do |sub_event|
-              %li
-                #{sub_event.localize(I18n.locale, :title)},
-                = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["name"])
-                (#{RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["affiliation"])})
+        %ol
+          - @event.sub_events.each do |sub_event|
+            %li
+              %a{:href => schedule_details_path(:id => sub_event._id)}
+                #{sub_event.localize(I18n.locale, :title)}
+              ,
+              = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["name"])
+              (#{RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["affiliation"])})
+
       - if @event.language.present? || @event.sub_events
         %h3
           #{t(:presentation_language)}

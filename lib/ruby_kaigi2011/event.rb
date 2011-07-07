@@ -12,6 +12,15 @@ module RubyKaigi2011
       @sub_events ||= Event.find_by_ids(sub_event_ids || [])
     end
 
+    def ==(other)
+      return false unless other.is_a?(Event)
+      self._id == other._id
+    end
+
+    def same_or_contain?(other)
+      self == other || !!self.sub_events.detect {|sub| sub == other }
+    end
+
     def to_hash
       hash = @table.dup
       hash.delete(:sub_event_ids)
