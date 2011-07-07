@@ -133,7 +133,7 @@
         en: Ruby Tokai
         ja: Ruby東海
     - name:
-        en: Tasuo SAKURAI
+        en: Tatsuo SAKURAI
         ja: 櫻井達生
       affiliation:
         en: Everyleaf
@@ -432,11 +432,11 @@
 #        en:
 #        ja:
 #    - name:
-#        en:
-#        ja:
+#        en: Miyuki KOSHIBA
+#        ja: こしばみゆき
 #      affiliation:
-#        en:
-#        ja:
+#        en: Everyleaf
+#        ja: 株式会社万葉
 - section:
     name:
       en: "LT Timer Developer & Operator"
