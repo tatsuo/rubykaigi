@@ -12,6 +12,24 @@ module RubyKaigi2011
       @sub_events ||= Event.find_by_ids(sub_event_ids || [])
     end
 
+    def has_subevents?
+      sub_events.present?
+    end
+
+    def presenters(include_sub_events=false)
+      if include_sub_events && has_subevents?
+        [@table[:presenters], sub_events.map(&:presenters)].flatten.compact
+      else
+        @table[:presenters]
+      end
+    end
+
+    def languages
+      all_languages = [self.language, sub_events.map(&:language)].flatten.compact
+      language_frequency = all_languages.inject(Hash.new(0)) {|h, l| h[l] += 1; h}
+      language_frequency.sort_by{|k,v| -v}.map(&:first)
+    end
+
     def ==(other)
       return false unless other.is_a?(Event)
       self._id == other._id

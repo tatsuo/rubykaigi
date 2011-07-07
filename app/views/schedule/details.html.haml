@@ -24,18 +24,18 @@
               = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["name"])
               (#{RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["affiliation"])})
 
-      - if @event.language.present? || @event.sub_events
+      - if @event.languages.present?
         %h3
           #{t(:presentation_language)}
-        %p= @event.language || @event.sub_events.map(&:language).uniq.join(", ")
+        %p= @event.languages.join(", ")
+
       != render :partial => 'shared/2011/facebook'
       != render :partial => 'shared/2011/twitter'
-    - if @event.presenters || @event.sub_events
+    - if @event.presenters(true).present?
       #speaker
         %h3
           #{t(:speaker)}
-        - presenters = @event.presenters || @event.sub_events.map(&:presenters).flatten
-        - presenters.each do |presenter|
+        - @event.presenters(true).each do |presenter|
           %div.avatar
             %a{:href => "#", :target => "_blank"}
               - if presenter['gravatar'].present?
