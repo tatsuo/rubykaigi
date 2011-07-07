@@ -437,20 +437,14 @@
 #      affiliation:
 #        en:
 #        ja:
-#- section:
-#    name:
-#      en: "LT Timer Developer & Operator"
-#      ja: "LT タイマー"
-#    people:
-#    - name:
-#        en:
-#        ja:
-#      affiliation:
-#        en:
-#        ja:
-#    - name:
-#        en:
-#        ja:
-#      affiliation:
-#        en:
-#        ja:
+- section:
+    name:
+      en: "LT Timer Developer & Operator"
+      ja: "LT タイマー"
+    people:
+    - name:
+        en: Katsuyoshi ITO
+        ja: 伊藤勝良
+      affiliation:
+        en: ITO SOFT DESIGN, Akita.m
+        ja: 有限会社伊藤ソフトデザイン, Akita.m
