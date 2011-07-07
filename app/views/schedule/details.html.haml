@@ -17,8 +17,9 @@
         %ol
           - @event.sub_events.each do |sub_event|
             %li
-              %a{:href => schedule_details_path(:id => sub_event._id)}
+              %a.tip{:href => schedule_details_path(:id => sub_event._id)}
                 #{sub_event.localize(I18n.locale, :title)}
+                %span.lt= sub_event.localize(I18n.locale, :abstract)
               ,
               = RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["name"])
               (#{RubyKaigi2011::Localizer.value_for_locale(I18n.locale, sub_event.presenters.first["affiliation"])})
