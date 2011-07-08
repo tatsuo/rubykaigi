@@ -1,0 +1,13 @@
+- @title = t(:schedule)
+#content
+  %h1
+    #{t(:schedule)}
+  %div
+    - @room_timetables.map(&:date).uniq.sort.each do |date|
+      %h2
+        %time{:datetime => l(date, :format => :default)}
+          = l date, :format => :schedule_grid
+      - @rooms.each do |room|
+        %p
+          %a.linkMark{:href => schedule_phone_list_path(:id => "#{date.day}#{room._id}")}
+            #{room.localize(current_locale, :name)}
