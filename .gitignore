@@ -20,6 +20,7 @@ mkmf.log
 rerun.txt
 public/2010/stylesheets/*.css
 public/2011/stylesheets/*.css
+!jquery.mobile-1.0a3.min.css
 .DS_Store
 nbproject
 nbproject/*
