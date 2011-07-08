@@ -90,4 +90,19 @@ class ApplicationController < ActionController::Base
   def current_locale
     I18n.locale
   end
+
+  def check_if_smartphone
+    if params[:smartphone].present?
+      @is_smartphone = !!params[:smartphone]
+    elsif /Android.*Mobile|iPhone/ =~ request.user_agent
+      @is_smartphone = true
+    else
+      @is_smartphone = false
+    end
+  end
+
+  def smartphone?
+    @is_smartphone
+  end
+  helper_method :smartphone?
 end

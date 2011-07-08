@@ -24,10 +24,11 @@
       - else
         %li (Nothing)
 
-    %h2 RubyKaigi Related Actions
-    %ul.listMark
-      %li!= link_to 'Show Your Cart', carts_path
-      %li Order History (Coming Soon :-&lt;)
+    - unless smartphone?
+      %h2 RubyKaigi Related Actions
+      %ul.listMark
+        %li!= link_to 'Show Your Cart', carts_path
+        %li Order History (Coming Soon :-&lt;)
 
     %h2 Account Related Actions
     %ul.listMark

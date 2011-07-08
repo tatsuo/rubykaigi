@@ -1,11 +1,13 @@
 class TicketsController < ApplicationController
   before_filter :login_required, :only => [:index, :regenerate_permalink]
+  before_filter :check_if_smartphone
 
   layout_for_latest_ruby_kaigi
 
   def index
     I18n.locale = 'en'
     @tickets = user.tickets_of(RubyKaigi.latest_year)
+    render :layout => "ruby_kaigi2011_phone" if smartphone?
   end
 
   def edit
@@ -19,6 +21,7 @@ class TicketsController < ApplicationController
       return
     end
     @title = "[Edit] #{@ticket.ticket_code}, #{I18n.t(@ticket.ticket_type)}"
+    render :layout => "ruby_kaigi2011_phone" if smartphone?
   end
 
   def update
@@ -37,7 +40,11 @@ class TicketsController < ApplicationController
       flash[:notice] = 'Your ticket have been updated.'
       redirect_to ticket_path(@ticket)
     else
-      render :edit
+      if smartphone?
+        render :edit, :layout => "ruby_kaigi2011_phone"
+      else  
+        render :edit
+      end
     end
   end
 
@@ -49,6 +56,7 @@ class TicketsController < ApplicationController
       return
     end
     @title = "#{@ticket.ticket_code}, #{I18n.t(@ticket.ticket_type)}"
+    render :layout => "ruby_kaigi2011_phone" if smartphone?
   end
 
   def regenerate_permalink
