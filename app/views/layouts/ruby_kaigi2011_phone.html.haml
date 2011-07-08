@@ -54,12 +54,11 @@
               %a{:href => "http://rubykaigi.tdiary.net/", :target => "_blank"}
                 #{t(:rubykaigi_nikki)}
             %li
-              %a{:href => "/2011/#{current_locale}/phone_registration"}
-                #{t(:registration)}
-            -#%li
-              -#%a{:href => "/2011/#{current_locale}/phone_programs"}
-              -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"}
-              -#  #{t(:programs)}
+              %a{:href => "/tickets"}
+                #{t(:show_tickets)} 
+            %li
+              %a{:href => "/2011/#{current_locale}/phone_schedule"}
+                #{t(:schedule)}
             -#%li
               -##{t(:hall_main)}:
               -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"} Ustream
@@ -70,26 +69,28 @@
               -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"} Ustream
               -#|
               -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"} IRC
-            -#%li
-              -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"}
-              -#  #{t(:access)}
-            -#%li
-              -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"}
-              -#  #{t(:hotel_and_travel)}
+            %li
+              %a{:href => "/2011/#{current_locale}/phone_access"}
+                #{t(:access)}
+            %li
+              %a{:href => "/2011/#{current_locale}/phone_coming_soon"}
+                #{t(:hotel_and_travel)}
             -#%li
               -#%a{:href => "/2011/#{current_locale}/phone_coming_soon", :target => "_blank"}
               -#  #{t(:floor_guide)}(PDF)
             -#%li
               -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"}
               -#  FAQ
-            -#%li
-              -#%a{:href => "/2011/#{current_locale}/phone_coming_soon"}
-              -#  Download(wallpaper)
+            %li
+              %a{:href => "/2011/goodies/wallpapers01/1024x1024.jpg"}
+                #{t(:wallpapers)}
           %p
             【#{t(:inquiry)}】 2011_at_rubykaigi_dot_org
           %p.icon
             %a{:href => "http://twitter.com/rubykaigi"}
               %img{:alt => "Twitter", :src => "/2011/images/commonTwitter.png"}
+            %a{:href => "http://www.facebook.com/pages/RubyKaigi/"}
+              %img{:alt => "facebook", :src => "/2011/images/commonFacebook.png"}
             != render :partial => 'shared/2011/rss_btn'
           %address
             \&copy; 2006-2011
