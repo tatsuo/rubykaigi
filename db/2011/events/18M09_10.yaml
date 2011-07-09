@@ -14,6 +14,6 @@ title:
   en: "pebbles: A namespace for joke gems"
   ja: "pebbles: rubygemsにおけるジョークモジュールの名前空間について"
 abstract: 
-  en: "Just like the Acme namespace in Perl's CPAN, I propose that we use the namespace ¥"pebbles¥" for joke gems so that we don't pollute the RubyGems namespace."
+  en: "Just like the Acme namespace in Perl's CPAN, I propose that we use the namespace \"pebbles\" for joke gems so that we don't pollute the RubyGems namespace."
   ja: "ジョークで作ったrubygemsで名前空間を汚染しないために、Perlにおける「Acme」のようなジョークモジュール専用の名前空間(命名規約)として「pebbles」を提案します。"
 language: Japanese
