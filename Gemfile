@@ -33,6 +33,7 @@ group :development do
   gem 'capistrano-notification', :require => nil
   gem 'gettext', '<2' # required by i18n_generators
   gem 'thin', :require => nil
+  gem 'yaml_waml', :require => nil
 end
 
 group :test, :cucumber do
