@@ -27,13 +27,14 @@ gem 'tapp'
 
 gem 'ri_cal', :git => "git://github.com/ctide/ri_cal.git"
 
+gem 'yaml_waml', :require => nil
+
 group :development do
   gem 'capistrano', :require => nil
   gem 'capistrano-ext', :require => nil
   gem 'capistrano-notification', :require => nil
   gem 'gettext', '<2' # required by i18n_generators
   gem 'thin', :require => nil
-  gem 'yaml_waml', :require => nil
 end
 
 group :test, :cucumber do
