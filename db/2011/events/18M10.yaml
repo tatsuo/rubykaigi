@@ -4,16 +4,16 @@ presenters:
       en: Yukihiro "Matz" Matsumoto
       ja: まつもとゆきひろ
     affiliation:
-      en:
-      ja:
+      en: ネットワーク応用通信研究所、楽天、Heroku[NEW]
+      ja: Network Applied Communication Laboratory Ltd., Rakuten,Inc., Heroku *New*
     bio:
       en:
-      ja:
+      ja: Rubyのパパ。肩書が順調に増加中です。
     gravatar: 0ec4920185b657a03edf01fff96b4e9b
 title:
-  en: "Keynote"
-  ja:
+  en: Pendulum, PG, and the hundred year language
+  ja: 三題噺: 振子とPGと百年の言語
 abstract:
   en:
-  ja:
+  ja: もうそろそろ飽きたかもしれませんが、今年もまた未来の話をします。当たるも八卦、当たらぬも八卦。
 language: Japanese
