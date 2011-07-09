@@ -1,18 +1,19 @@
---- 
+---
 presenters:
-  - name: 
+  - name:
       en: Shin-ichiro OGAWA
       ja: "小川 伸一郎"
-    affiliation: 
+    affiliation:
       en: Tokyu.rb
       ja: Tokyu.rb
-    bio: 
+    bio:
       en: Rails Developer, jpmobile contributer. Ph.D. Physics.
       ja: "Railsアプリケーション開発者。jpmobileを開発しています。"
-title: 
+    gravatar: d458733ada0c2ca6937f84c67a9e3fff
+title:
   en: The best practice of building mobile website with jpmobile
   ja: "jpmobileのベストプラクティス"
-abstract: 
+abstract:
   en: Jpmobile is a most famus Rails plugin for Japanese Mobile Phone. I will introduce the best practice for the construction of the mobile website. In this practice, I will introduce jpmobile settings and the testing method with jpmobile.
   ja: "jpmobileを使ったモバイルサイト制作のベストプラクティスを紹介します。スマートフォンから携帯電話まで、簡単なコンテンツを製作する過程で、jpmobileをどう使うのか、どのように設定をしていくのかについて解説していきます。"
 language: Japanese

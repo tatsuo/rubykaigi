@@ -1,21 +1,22 @@
---- 
+---
 presenters:
-  - name: 
+  - name:
       en: Eric Hodel
-      ja: 
-    affiliation: 
+      ja:
+    affiliation:
       en: Seattle Ruby Brigade, AT&T Interactive
-      ja: 
-    bio: 
+      ja:
+    bio:
       en: |-
         Eric Hodel has been a Rubyist for nearly a decade.  He became a committer to
         ruby by writing documentation.  Eric now maintains RDoc and RubyGems and is a
         founder of the Seattle Ruby Brigade.
-      ja: 
-title: 
+      ja:
+    gravatar: 58479f76374a3ba3c69b9804163f39f4
+title:
   en: Writing Friendly Libraries
-  ja: 
-abstract: 
+  ja:
+abstract:
   en: Writing Friendly Libraries will cover how to write libraries that are easy to use, extend and maintain.  My talk will cover techniques such as using plugin systems for extensibility and adding optional features.  I will also cover testing strategies and other tools to ease maintenance of software.
-  ja: 
+  ja:
 language: English
