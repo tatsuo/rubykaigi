@@ -2,7 +2,7 @@
 #content
   %h1 #{@title}
   #main
-    %h2 Your Ticket(s) to RubyKaigi
+    %h2 Your Ticket(s) to RubyKaigi 2011
     %ul.listMark
       - @tickets.each do |ticket|
         - extra_ticket_type = ticket.extra_ticket_type.present? ? " (#{ticket.extra_ticket_type})" : ""
