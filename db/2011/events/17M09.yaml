@@ -8,7 +8,7 @@ presenters:
       ja: "日本Rubyの会, (株)永和システムマネジメント"
     bio:
       en: "Kakutani Shintaro is a just another strong Ruby proponent, chief programmer in Eiwa System Management, Inc, a board member of Nihon Ruby-no-kai(Japan Ruby Group) and a core member of Asakusa.rb. He is one of the organizers of RubyKaigi since 2006. He have translated some english technical book into japanese: \"Agile Samurai\"(co-supervisor), \"Agile Estimating and Planning\"(co-translator), \"Interface Oriented Design\"(supervisor), \"Practices of an Agile Developer\"(co-supervisor) and \"From Java to Ruby\"(translator)."
-      ja: "ただのRuby厨。(株)永和システムマネジメントサービスプロバイディング事業部チーフプログラマ。日本Rubyの会理事。自称Asakusa.rb幹部。RubyKaigiの運営を2006年からやってます。著書は『アジャイルな見積りと計画づくり』(共同翻訳)、『インターフェイス指向設計』(監訳)、『アジャイルプラクティス』(共同監訳)、『JavaからRubyへ』(翻訳)。最新刊の『The Agile Samurai』(監訳)はジュンク堂書店RubyKaigi店で販売されます。みんな買ってね。"
+      ja: "ただのRuby厨。(株)永和システムマネジメントサービスプロバイディング事業部チーフプログラマ。日本Rubyの会理事。自称Asakusa.rb幹部。RubyKaigiの運営を2006年からやってます。著書は『アジャイルな見積りと計画づくり』(共同翻訳)、『インターフェイス指向設計』(監訳)、『アジャイルプラクティス』(共同監訳)、『JavaからRubyへ』(翻訳)。最新刊の『アジャイルサムライ』(監訳)はジュンク堂書店RubyKaigi店で販売されます。みんな買ってね。"
     gravatar: 63a6bff89d692e21de20868202bc8dde
 title:
   en: "The Gate"
