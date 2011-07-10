@@ -23,6 +23,7 @@ presenters:
     bio:
       en: "Software Engineer. like: Excel, Ruby, UML, DFD, Agile Development, Project Facilitation"
       ja: "ソフトウェアエンジニア。好きなもの: Excel, Ruby, UML, DFD, アジャイルなソフトウェア開発を進める事, プロジェクトファシリテーション"
+    gravatar: 9d2d4c8b739b1b4d7882ba49dcf1d276
   - name:
       en: Kakutani Shintaro
       ja: "角谷 信太郎"
