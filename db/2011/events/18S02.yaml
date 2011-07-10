@@ -1,22 +1,23 @@
---- 
+---
 presenters:
-  - name: 
+  - name:
       en: ucnv
-      ja: 
-    affiliation: 
+      ja:
+    affiliation:
       en: Independent
-      ja: 
-    bio: 
+      ja:
+    bio:
       en: |-
         ucnv is a web developer and visual artist based in Tokyo. In 2009, he
         developed a Ruby library to make broken videos, named AviGlitch. He
         spends a lot of time destroying images or videos. He uses these broken
         things for visual live performances, VJs and music videos.
       ja: "ウェブプログラマー、グリッチ映像なども作ります。"
-title: 
+    gravatar: 8c98a756a956b459da8cc616ad8f9d90
+title:
   en: Visual Glitch, using Ruby
-  ja: 
-abstract: 
+  ja:
+abstract:
   en: |-
     The "visual glitch" is an artifact view of corrupted image/video data.
     Some art people say that "true" glitch can't be reproduced, but I
