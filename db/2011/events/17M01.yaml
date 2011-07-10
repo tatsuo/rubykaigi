@@ -1,18 +1,19 @@
---- 
+---
 presenters:
-  - name: 
+  - name:
       en: Kazuhiro NISHIYAMA
       ja: "西山和広"
-    affiliation: 
+    affiliation:
       en: Good-Day Inc.
       ja: "株式会社 グッデイ"
-    bio: 
+    bio:
       en: TBD
       ja: "MRIメンテナの一人"
-title: 
+    gravatar: 8e497efbe99e2fa051316337d03624d9
+title:
   en: How to make secure program
   ja: "安全なプログラムの作り方"
-abstract: 
+abstract:
   en: TBD
   ja: "コミッタなどとして関わっているソフトウェアの脆弱性修正や\n\
     脆弱性を IPA へ届出経由で修正してもらった経験をふまえて\n\

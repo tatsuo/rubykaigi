@@ -9,6 +9,7 @@ presenters:
     bio:
       en: I'm Linux kernel developer and Ruby commiter. I'm interest performance improvement and platform depended issue fixing.
       ja: "Rubyコミッタ。世界的にもめずらしいLinuxカーネル開発者とのデュアルクラス。IOとかロックのようなRuby言語知らなくてもハックできるあたりに主に生息している。最近「Rubyをもっとも知らないコミッタ」の称号を奪われてしょんぼりしているらしい"
+    gravatar: 02da662c083396641da96c1d32fc86ed
 title:
   en: CRuby lock design improvement and why it sucks
   ja: "CRubyのロックデザインの解説および改善案について"

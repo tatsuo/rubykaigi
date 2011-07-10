@@ -48,6 +48,10 @@ class TicketsController < ApplicationController
       render :status => '404', :file => 'public/404.html', :layout => false
       return
     end
+    unless @ticket.ruby_kaigi == RubyKaigi.latest
+      render :status => '403', :file => 'public/403.html', :layout => false
+      return
+    end
     @title = "#{@ticket.ticket_code}, #{I18n.t(@ticket.ticket_type)}"
   end
 

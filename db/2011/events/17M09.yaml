@@ -7,13 +7,13 @@ presenters:
       en: Nihon Ruby-no-kai(Japan Ruby Group), Eiwa System Management, Inc.
       ja: "日本Rubyの会, (株)永和システムマネジメント"
     bio:
-      en: "Kakutani Shintaro is a just another strong Ruby proponent, chief programmer in Eiwa System Management, Inc and board member of Nihon Ruby-no-kai(Japan Ruby Group). He is one of the organizers of RubyKaigi since 2006. He have translated some english technical book into japanese: \"Agile Samurai\"(supervisor), \"Agile Estimating and Planning\"(co-translator), \"Interface Oriented Design\"(supervisor), \"Practices of an Agile Developer\"(co-supervisor) and \"From Java to Ruby\"(translator)."
-      ja: "ただのRuby厨。(株)永和システムマネジメントサービスプロバイディング事業部チーフプログラマ。日本Rubyの会理事。RubyKaigiの運営を2006年からやってます。著書は『アジャイルな見積りと計画づくり』(共同翻訳)、『インターフェイス指向設計』(監訳)、『アジャイルプラクティス』(共同監訳)、『JavaからRubyへ』(翻訳)。最新刊の『The Agile Samurai』(監訳)が RubyKaigi 2011 の頃には出版されているはず。"
+      en: "Kakutani Shintaro is a just another strong Ruby proponent, chief programmer in Eiwa System Management, Inc, a board member of Nihon Ruby-no-kai(Japan Ruby Group) and a core member of Asakusa.rb. He is one of the organizers of RubyKaigi since 2006. He have translated some english technical book into japanese: \"Agile Samurai\"(co-supervisor), \"Agile Estimating and Planning\"(co-translator), \"Interface Oriented Design\"(supervisor), \"Practices of an Agile Developer\"(co-supervisor) and \"From Java to Ruby\"(translator)."
+      ja: "ただのRuby厨。(株)永和システムマネジメントサービスプロバイディング事業部チーフプログラマ。日本Rubyの会理事。自称Asakusa.rb幹部。RubyKaigiの運営を2006年からやってます。著書は『アジャイルな見積りと計画づくり』(共同翻訳)、『インターフェイス指向設計』(監訳)、『アジャイルプラクティス』(共同監訳)、『JavaからRubyへ』(翻訳)。最新刊の『アジャイルサムライ』(監訳)はジュンク堂書店RubyKaigi店で販売されます。みんな買ってね。"
     gravatar: 63a6bff89d692e21de20868202bc8dde
 title:
   en: "The Gate"
   ja: "The Gate"
 abstract:
-  en: "(To Be Announced)"
-  ja: "(To Be Announced)"
+  en: "DISCLAIMER: THIS TALK WILL BE NON-TECHNICAL RUBY TOPICS AND VERY SPECIFIC TO THE CONTEXT IN JAPAN.if you are non-Japanese Rubyist, you would be better off to go to the sub hall in this slot.they will be give a technical talk, so it's okay if you cannot understand Japanese well :) why don't they give talks in main hall instead of him? -- hmm, he, kakutani is kinda \"charismatic\" presentation guy in Ruby community in Japan(hehe). Anyway, he'll talk about Dave \"pragmatic\" Thomas and Ruby Community in Japan. What should we do with the world without RubyKaigi(as we know it)?"
+  ja: "RubyKaigi2007でDave Thomasは私たち日本のRubyistに「宿題」を出しました。かくたにはこの宿題への答えを3年かけて探し、2010年にやっとその答えを見つけました。それが「門」というキーワードです。ところがRubyConf 2010の基調講演でDave ThomasはRubyコミュニティに向けて今後10年の新たな「宿題」を出しました。本トークでは、残念ながら今回のRubyKaigi2011での来日を果たせなくなったDave Thomasに代わって、僭越ながら私かくたにが、皆さんへDave Thomasからの「宿題」をお伝えします。本トークが皆さんと一緒にRubyKaigi(as we know it)なき世界で一緒に暮らしていくことを考えるきっかけになることを願っています。追伸: 高橋征義さんからのリクエストには(まだ)応えられないんじゃないかなあ、と今のところ思ってます: http://d.hatena.ne.jp/takahashim/20110614/p1"
 language: "Japanese"

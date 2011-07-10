@@ -1,18 +1,19 @@
---- 
+---
 presenters:
-  - name: 
+  - name:
       en: Shugo Maeda
       ja: "前田 修吾"
-    affiliation: 
+    affiliation:
       en: Network Applied Communication Laboratory Ltd.
       ja: "株式会社ネットワーク応用通信研究所"
-    bio: 
+    bio:
       en: a Ruby committer
       ja: "Rubyコミッタ"
-title: 
+    gravatar: 18a797893e6768e048c1d15429f96bb4
+title:
   en: How to read JIS X 3017
   ja: "JIS X 3017の読み方"
-abstract: 
+abstract:
   en: JIS X 3017 is the Japanese national standard of the Ruby programming language.  This talk explains why the standard and Ruby itself are so complex.
   ja: "JIS X 3017はプログラミング言語Rubyの日本国内規格である。この講演では，この規格及びRuby自身がなぜかくも複雑であるかを説明する。"
 language: Japanese

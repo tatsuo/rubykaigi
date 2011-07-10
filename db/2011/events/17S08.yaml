@@ -11,6 +11,7 @@ presenters:
         Kouji Takao is one of the commiter of MRI.
         He is maintener of Readline of Ruby.
       ja: "MRIメンテナの一人。担当はReadlineライブラリです。"
+    gravatar: 0680ae0d795607a6d9d7fb24698710bd
 title:
   en: MacRuby on Rails
   ja: "MacRuby on Rails 〜MacRubyから見たcRuby〜"
