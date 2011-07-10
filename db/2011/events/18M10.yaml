@@ -4,8 +4,8 @@ presenters:
       en: Yukihiro "Matz" Matsumoto
       ja: まつもとゆきひろ
     affiliation:
-      en: ネットワーク応用通信研究所、楽天、Heroku[NEW]
-      ja: Network Applied Communication Laboratory Ltd., Rakuten,Inc., Heroku *New*
+      en: Network Applied Communication Laboratory Ltd., Rakuten,Inc., Heroku *New*
+      ja: ネットワーク応用通信研究所、楽天、Heroku[NEW]
     bio:
       en:
       ja: Rubyのパパ。肩書が順調に増加中です。
