@@ -1,18 +1,28 @@
 --- 
 presenters:
-  - name: 
-      en: "Koutaro Okabe / Yukihiro Matsumoto"
-      ja: "岡部浩太郎 / まつもとゆきひろ"
-    affiliation: 
+  - name:
+      en: "Koutaro Okabe"
+      ja: "岡部浩太郎"
+    affiliation:
       en: Fukuoka CSK / Network Applied Communication Laboratory / Kyushu Institute of Technology
       ja: "福岡CSK / ネットワーク応用通信研究所 / 九州工業大学"
-    bio: 
+    bio:
       en: Developers of Lightweight Ruby and Ruby chip for embedded systems
       ja: "組込みシステムのための軽量RubyやRubyチップの開発者"
-title: 
+  - name:
+      en: "Yukihiro Matsumoto"
+      ja: "まつもとゆきひろ"
+    affiliation:
+      en:
+      ja:
+    bio:
+      en:
+      ja:
+    gravatar: 0ec4920185b657a03edf01fff96b4e9b
+title:
   en: Lightweight Ruby
   ja: "軽量Ruby"
-abstract: 
+abstract:
   en: We introduce current status of development in Lightweight Ruby and Ruby chip focused on embedded systems.
   ja: "組込みシステムでの活用を想定した軽量RubyやRubyチップの開発の現状を紹介する．"
 language: Japanese
