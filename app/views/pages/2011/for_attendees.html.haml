@@ -14,11 +14,14 @@
         %a{:href => "/2011/#{current_locale}/for_attendees#access"}
           #{t(:access)}
       %li
-        %a{:href => "/2011/#{current_locale}/for_attendees#hotel_and_travel"}
-          #{t(:hotel_and_travel)}
-      %li
         %a{:href => "/2011/#{current_locale}/for_attendees#floor_guide"}
           #{t(:floor_guide)}
+      %li
+        %a{:href => "/2011/#{current_locale}/for_attendees#lunch_map"}
+          #{t(:lunch_map)}
+      %li
+        %a{:href => "/2011/#{current_locale}/for_attendees#hotel_and_travel"}
+          #{t(:hotel_and_travel)}
       %li
         %a{:href => "/2011/#{current_locale}/for_attendees#advent"}
           #{t(:advent)}
@@ -65,12 +68,6 @@
           #{t(:access)}
       != render :partial => 'pages/2011/for_attendees_access'
     != render :partial => 'shared/2011/back_to_top'
-    %article#hotel_and_travel
-      %h2
-        %a{:name => "hotel_and_travel"}
-          #{t(:hotel_and_travel)}
-      != render :partial => 'pages/2011/for_attendees_hotel_and_travel'
-    != render :partial => 'shared/2011/back_to_top'
     %article#floor_guide
       %h2
         %a{:name => "floor_guide"}
@@ -78,6 +75,20 @@
       %p.btn
         %a{:href => "/2011/#{current_locale}/coming_soon"}
           %img{:alt => "Floor Guide(フロアガイド)", :height => "40", :src => "/2011/images/indexBtnFloorGuide.png", :width => "320", :height => "40"}
+    != render :partial => 'shared/2011/back_to_top'
+    %article#lunch_map
+      %h2
+        %a{:name => "lunch_map"}
+          #{t(:lunch_map)}
+      %p.btn
+        %a{:href => "/2011/#{current_locale}/coming_soon"}
+          %img{:alt => "Floor Guide(ランチマップ)", :height => "40", :src => "/2011/images/indexBtnLunchMap.png", :width => "320", :height => "40"}
+    != render :partial => 'shared/2011/back_to_top'
+    %article#hotel_and_travel
+      %h2
+        %a{:name => "hotel_and_travel"}
+          #{t(:hotel_and_travel)}
+      != render :partial => 'pages/2011/for_attendees_hotel_and_travel'
     != render :partial => 'shared/2011/back_to_top'
     %article#advent
       %h2
