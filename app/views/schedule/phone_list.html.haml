@@ -1,0 +1,18 @@
+- formatted_date = l(@room_timetable.date, :format => :schedule_grid)
+- @title = "#{formatted_date} (#{@room.localize(current_locale, :name)})"
+#content
+  %h1
+    #{t(:schedule)}
+  %div
+    %h2
+      %time{:datetime => formatted_date}
+        #{@title}
+    %ul.listMark
+      - @room_timetable.periods.each_cons(2).each do |s, e|
+        %li
+          %p= [s, e].map {|t| t.strftime("%H:%M") }.join(' - ')
+          - @room_timetable.session_at(s).events.each do |event|
+            %p
+              %a{:href => schedule_phone_details_path(:id => event._id) }
+                #{event.localize(current_locale, :title)}
+            %p= event.presenters.map {|pr| RubyKaigi2011::Localizer.value_for_locale(I18n.locale, pr["name"]) }.join(", ") if event.presenters.present?

@@ -3,17 +3,16 @@
     %img{:alt => "Date: July16(Sat) - 18(Mon),2011 Venue: Nerima Culture Center(Tokyo, Japan) Keynotes: Yukihiro \"Mats\" Matsumoto, Dave Thomas, Aaron Patterson(a.k.a. tenderlove)", :height => "235", :src => "/2011/images/phoneDetails.png", :width => "300"}
   .section
     %p.btn
-      %a{:href => "/2011/#{current_locale}/phone_registration"}
-        %img{:alt => "Registration(チケット購入)", :src => "/2011/images/registrationBtnTickets.png"}
+      %a{:href => "/tickets"}
+        %img{:alt => "Tickets(チケットを表示)", :src => "/2011/images/indexBtnTickets.png"}
     %p.btn
-      -#%a{:href => "/2011/#{current_locale}/schedule/grid"}
-      %a{:href => "/2011/#{current_locale}/phone_coming_soon"}
-        %img{:alt => "Programs(プログラム)", :src => "/2011/images/indexBtnPrograms.png"}
+      %a{:href => "/2011/#{current_locale}/schedule/phone_index"}
+        %img{:alt => "Schedule(スケジュール)", :src => "/2011/images/indexBtnSchedule.png"}
     %p.btn
-      %a{:href => "/2011/#{current_locale}/phone_coming_soon"}
+      %a{:href => "/2011/#{current_locale}/phone_access"}
         %img{:alt => "Access(アクセス)", :src => "/2011/images/indexBtnAccess.png"}
     %p.btn
-      %a{:href => "/2011/#{current_locale}/phone_coming_soon"}
+      %a{:href => "/2011/#{current_locale}/phone_hotel_and_travel"}
         %img{:alt => "Hotel &amp; Travel(宿泊のご案内)", :src => "/2011/images/indexBtnHotelAndTravel.png"}
     %p.btn
       %a{:href => "/2011/#{current_locale}/phone_coming_soon", :target => "_blank"}
@@ -43,4 +42,10 @@
       %dd
         %a{:href => "http://b.hatena.ne.jp/t/rubykaigi2011", :target => "_blank"}
           rubykaigi2011
+  #wallpapers
+    %h2
+      #{t(:wallpapers)} (1024x1024)
+    %p
+      %a{:href => "/2011/goodies/wallpapers01/1024x1024.jpg"}
+        %img{:src => "/2011/images/commonBtnDownload.png", :alt => "Download"}
 

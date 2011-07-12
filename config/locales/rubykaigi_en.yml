@@ -122,9 +122,6 @@ en:
   signout: 'Sign out'
   dashboard: 'Dashboard'
   account_settings: 'Account Settings'
-  date_fri: '2011年7月16日(金)'
-  date_sat: '2011年7月17日(土)'
-  date_sun: '2011年7月18日(日)'
   advent: 'Advent Calendar'
   hashtag: 'hashtag'
   advent_joinus: "How to join 'RubyKaigi Advent Calendar 2011'"
@@ -161,4 +158,4 @@ en:
   add_new_authentication: 'Add another service to sign in.'
   remove_authentication: 'Remove'
   lunch_map: 'Lunch Map'
-
+  show_tickets: 'Tickets'

@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
   layout_for_latest_ruby_kaigi
+  before_filter :check_if_smartphone
 
   protect_from_forgery :except => :create
 
   def new
+    render :layout => "ruby_kaigi2011_phone" if smartphone?
   end
 
   def create

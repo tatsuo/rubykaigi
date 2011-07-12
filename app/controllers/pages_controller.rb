@@ -4,14 +4,15 @@ class PagesController < LocaleBaseController
   before_filter :readonly
   before_filter :page_name_is_valid
   before_filter :redirect_to_past_kaigi
+  before_filter :check_if_smartphone
 
   layout_for_latest_ruby_kaigi
 
   def show
+    page_name = params[:page_name]
     case params[:year]
     when '2009', '2010'
       # XXX: existing static pages should be handled before
-      page_name = params[:page_name]
       if page_name == 'index' || page_name.blank?
         render :file => "public/#{params[:year]}/#{params[:locale]}/index.html"
       else
@@ -21,10 +22,12 @@ class PagesController < LocaleBaseController
     when "2011"
       @body_id = params[:page_name]
       begin
-        if params[:page_name] =~ /^phone/
-          render :template => "pages/2011/#{params[:page_name]}", :layout => "ruby_kaigi2011_phone"
+        if smartphone? && page_name == 'index'
+          redirect_to(:page_name => 'phone_index')
+        elsif page_name =~ /\Aphone_/
+          render :template => "pages/2011/#{page_name}", :layout => "ruby_kaigi2011_phone"
         else
-          render :template => "pages/2011/#{params[:page_name]}", :layout => "ruby_kaigi2011"
+          render :template => "pages/2011/#{page_name}", :layout => "ruby_kaigi2011"
         end
       rescue ActionView::MissingTemplate => e
         render :file => "public/404.html", :status => 404, :layout => false
@@ -56,6 +59,16 @@ class PagesController < LocaleBaseController
   end
 
   def redirect_to_past_kaigi
+    if (year = params[:year].to_i) < 2009
+      redirect_to "http://jp.rubyist.net/RubyKaigi#{year}"
+    elsif 2011 < year
+      render :file => "public/404.html", :status => 404, :layout => false
+    else
+      true
+    end
+  end
+
+  def redirect_to_phone_index
     if (year = params[:year].to_i) < 2009
       redirect_to "http://jp.rubyist.net/RubyKaigi#{year}"
     elsif 2011 < year

@@ -1,10 +1,12 @@
 class AccountsController < ApplicationController
   verify :session => :params_from_authenticator, :only => %w(new create), :redirect_to => :signin_path
+  before_filter :check_if_smartphone
 
   layout_for_latest_ruby_kaigi
 
   def new
     @rubyist = Rubyist.new_with_omniauth(session[:params_from_authenticator])
+    render :layout => "ruby_kaigi2011_phone" if smartphone?
   end
 
   def create
@@ -25,6 +27,7 @@ class AccountsController < ApplicationController
 
   def edit
     @rubyist = user
+    render :layout => "ruby_kaigi2011_phone" if smartphone?
   end
 
   def update

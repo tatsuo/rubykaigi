@@ -20,22 +20,25 @@
   %h2 Your Name
   %p.ticket #{@ticket.name}
 
-  .screen_only
-    %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
+  - unless smartphone?
+    .screen_only
+      %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
   %h2 Your Email
   %p.ticket #{@ticket.email}
 
-  .screen_only
-    %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
+  - unless smartphone?
+    .screen_only
+      %p{:style => 'text-align:right'}!= link_to 'Edit', edit_ticket_path(@ticket)
 
   .screen_only
     %h2 Permalink
     %p{:style=>'font-size:12px'}!= link_to ticket_url(@ticket), ticket_path(@ticket)
     %p (Anybody can see this page via permalink)
-    %p{:style => 'text-align:right'}!= link_to('Regenerate Permalink', regenerate_permalink_ticket_path(@ticket), :method => :put)
+    - unless smartphone?
+      %p{:style => 'text-align:right'}!= link_to('Regenerate Permalink', regenerate_permalink_ticket_path(@ticket), :method => :put)
   %p.stamp
-    %img{ :alt => "Thank you for your attendance!", :width => "400", :height => "75", :src => "/2011/images/tickets_stamp.png" }
+    %img{ :alt => "Thank you for your attendance!", :src => "/2011/images/tickets_stamp.png" }
 
   <br />
   <br />
