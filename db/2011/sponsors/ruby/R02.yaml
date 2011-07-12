@@ -9,14 +9,14 @@ pr:
     
     High-performance technology, easier to use. In addition to Ricoh product development and services that focus on imaging equipment, Ricoh is expanding its business scope to provide a combination of office solutions. One of these new businesses being developed is quanp.
     quanp is a visual online storage service for helping individuals to get used to utilizing information intelligently. The user can upload files, share, and do simple search operations. quanp’s server systems are powered by Ruby. In the future, while contributing knowledge and technologies gained during development to the growth of Ruby, we would like to refine large-scale system construction technologies that utilize Ruby’s advantages.
-  ja: "quanpの紹介\r\n\
+  ja: "クオンプの紹介\r\n\
    高性能な技術を、より使いやすく。リコーは画像機器を中心とした製品開発やサービスの提供に加え、\r\n\
-   それらを組み合わせたオフィスソリューションの提供へと事業領域を拡大しています。そうした新規事業の一つとして“quanp”を展開。\r\n\
-   quanpは情報をスマートに使いこなすための個人向けビジュアルオンラインストレージサービスです。\r\n\
+   それらを組み合わせたオフィスソリューションの提供へと事業領域を拡大しています。そうした新規事業の一つとして“クオンプ”を展開。\r\n\
+   quanpは情報をスマートに使いこなすための個人向けオンラインストレージサービスです。\r\n\
    ファイルのアップロード、共有、検索を簡単な操作で行うことができます。\r\n\
-   このquanpでは、サーバーシステムの構築においてRubyを活用しています。\r\n\
+   このクオンプでは、サーバーシステムの構築においてRubyを活用しています。\r\n\
    今後も、開発の中で得た知識・技術でRubyの発展に貢献するとともに、\r\n\
    Rubyの利点を活かした大規模システム構築技術に磨きをかけていきたいと考えています。\r\n\
-   quanpについての詳しい情報については、下記サイトをご覧ください。\r\n\
+   クオンプについての詳しい情報については、下記サイトをご覧ください。\r\n\
    http://www.quanp.com\r\n\"
 
