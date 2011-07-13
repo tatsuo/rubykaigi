@@ -147,9 +147,8 @@ article#team {
       background: none;
       height: 100px; }
     @include clearfix; }
-  #news,
   #twitter {
-    height: 357px; }
+    height: 420px; }
   #news,
   #tags,
   #twitter {
@@ -158,13 +157,18 @@ article#team {
     border-top: 5px solid #160f0d;
     overflow: hidden;
     border-bottom: 5px solid #fff; }
-  #news,
   #photos {
     height: 380px;
     float: left; }
   #news {
+    height: 550px;
+    float: left;
     width: 630px; }
   #twitter {
+    width: 310px;
+    float: right; }
+  #tags {
+    margin-top: 10px;
     width: 310px;
     float: right; }
   #registration {

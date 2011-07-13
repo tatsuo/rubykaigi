@@ -62,22 +62,6 @@
     %p.btn
       %a{:href => "/2011/#{current_locale}/for_attendees#community"}
         %img{:alt => "Community(コミュニティ)", :src => "/2011/images/indexBtnCommunity.png", :width => "320", :height => "40"}
-    %section#tags
-      %h2
-        %img{:alt => "Tags", :height => "35", :src => "/2011/images/indexTagsHeader.png", :width => "250"}
-      %dl
-        %dt Twitter:
-        %dd
-          %a{:href => "http://twitter.com/#search?q=%23rubykaigi"}
-            \#rubykaigi
-        %dt Flickr:
-        %dd
-          %a{:href => "http://www.flickr.com/search/?q=rubykaigi2011&f=hp", :target => "_blank"}
-            rubykaigi2011
-        %dt Blog:
-        %dd
-          %a{:href => "http://b.hatena.ne.jp/t/rubykaigi2011", :target => "_blank"}
-            rubykaigi2011
 #content
   %section#news
     != render 'shared/2011/news_section_on_index'
@@ -95,7 +79,7 @@
           title: 'Twitter #rubykaigi',
           subject: '',
           width: 'auto',
-          height: 245,
+          height: 300,
           theme: {
             shell: {
               background: '#fff',
@@ -118,4 +102,20 @@
             behavior: 'default'
           }
         }).render().start();
+  %section#tags
+    %h2
+      %img{:alt => "Tags", :height => "35", :src => "/2011/images/indexTagsHeader.png", :width => "250"}
+    %dl
+      %dt Twitter:
+      %dd
+        %a{:href => "http://twitter.com/#search?q=%23rubykaigi"}
+          \#rubykaigi
+      %dt Flickr:
+      %dd
+        %a{:href => "http://www.flickr.com/search/?q=rubykaigi2011&f=hp", :target => "_blank"}
+          rubykaigi2011
+      %dt Blog:
+      %dd
+        %a{:href => "http://b.hatena.ne.jp/t/rubykaigi2011", :target => "_blank"}
+          rubykaigi2011
   != render :partial => 'shared/2011/sponsors_list'
